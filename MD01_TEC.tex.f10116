@@ -1,0 +1,528 @@
+\documentclass[xcolor={svgnames},
+  %hyperref={colorlinks,citecolor=Blue,linkcolor=Blue,urlcolor=DarkBlue}, 
+  hyperref={colorlinks}, 
+  spanish, 12pt]{beamer}
+  \mode<presentation>
+  
+  \usefonttheme[onlymath]{serif}
+  \setbeamertemplate{theorems}[ams style] 
+  
+  
+\usetheme{metropolis}
+ \useinnertheme{rectangles} 
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{caption}[numbered]
+%\useoutertheme{infolines}
+\usepackage{cleveref}
+
+\setbeamercovered{highly dynamic}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\resetcounteronoverlays{saveenumi}
+
+%\usepackage{beamerthemebars}
+\usepackage{fontenc}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{fontenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{yfonts}
+%\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{textcomp}
+\usepackage{lmodern}
+\usepackage{fancyvrb}
+\usepackage{multicol}
+
+\DefineVerbatimEnvironment{ColorVerbatim}{Verbatim}%
+  {formatcom=\color{purple},commandchars=\\\{\}}
+  
+\usepackage{etoolbox}
+
+\BeforeBeginEnvironment{Verbatim}{\begingroup\color{purple}}%
+\AfterEndEnvironment{Verbatim}{\endgroup}%
+%\usepackage{etoolbox}
+% \AtBeginEnvironment{enumerate}{\begin{multicols}{2}}    %%% this line
+% \AtEndEnvironment{enumerate}{\end{multicols}}            %%% and this one
+% \usepackage{multicol}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%\usepackage[urlcolor=blue]{hyperref}
+%\numberwithin{section}{part}
+\numberwithin{equation}{section} %% Comment out for sequentially-numbered
+\numberwithin{figure}{section} %% Comment out for sequentially-numbered
+
+% Automatically generate section title slides in beamer?
+% Add support for \subsubsectionpage
+\def\subsubsectionname{\translate{}}
+\def\insertsubsubsectionnumber{\arabic{subsubsection}}
+\setbeamertemplate{subsubsection page}
+{
+  \begin{centering}
+    {\usebeamerfont{subsubsection name}\usebeamercolor[fg]{subsubsection name}\subsubsectionname}%~\insertsubsubsectionnumber}
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=4pt,center]{part title}
+      \usebeamerfont{subsubsection title}\insertsubsubsection\par
+    \end{beamercolorbox}
+  \end{centering}
+}
+\def\subsubsectionpage{\usebeamertemplate*{subsubsection page}}
+
+\AtBeginSection{\frame{\sectionpage}}
+\AtBeginSubsection{\frame{\subsectionpage}}
+\AtBeginSubsubsection{\frame{\subsubsectionpage}}
+
+\input{./00-03-entorno.tex}
+\input{./00-01-comandos.tex}
+
+%\date{\today}
+\title{Matem\'aticas Discretas}
+\author[Juliho Castillo]{\href{https://www.youtube.com/channel/UCb1i-EtybaWWX5urFfmMUWQ}{M. en C. Juliho Castillo}}
+
+\institute[UP-FI]{Facultad de Ingenier\'ia, Universidad Panamericana}
+\date{\today}
+
+\begin{document}
+
+\logo{
+ \includegraphics[width=3cm,keepaspectratio=true]{./logo.png}
+ %LOGO-CECYTEO.png: 200x200 pixel, 72dpi, 7.06x7.06 cm, bb=0 0 200 200
+}
+
+\frame{
+\titlepage
+}
+
+\frame{\tableofcontents}
+
+% \AtBeginSubsection[]
+% {
+%   \begin{frame}
+%     \tableofcontents[currentsubsection]
+%   \end{frame}
+% }
+
+\section{L\'ogica y C\'alculo Proposicional}
+
+\begin{frame}
+    Muchos algoritmos y demostraciones usan expresiones l\'ogicas tales como
+    \texttt{si p entonces q}. Entonces es necesario conocer los casos en los cuales esas expresiones son \texttt{ciertas} o \texttt{falsas}. Discutiremos esto en esta unidad. 
+\end{frame}
+
+
+
+\begin{frame}
+    Tambi\'en investigamos el valor de verdad de enunciados cuantificados, que son aquellos que usan los cuantificadores l\'ogicos \texttt{para todo...} y \texttt{existe...}
+\end{frame}
+
+\subsection{Proposiciones y Declaraciones Compuestas}
+
+\begin{frame}
+    Una proposici\'on es un enunciado declarativo que puede ser cierto o falso, pero no ambos. 
+\end{frame}
+
+\begin{frame}
+    \begin{exmp}
+        ?`Cu\'al de los siguientes enunciados es una proposici\'on?
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item El hielo flota en el agua.
+                \item China est\'a en Europa.
+                \item $2+2=4$
+                \item $2+2=5$
+                \item ?`A donde vas?
+                \item Haz tu tarea.
+            \end{enumerate}
+        \end{multicols}
+    \end{exmp}
+    
+\end{frame}
+
+\subsubsection{Proposiciones compuestas}
+
+\begin{frame}
+    Muchas proposiciones est\'an \texttt{compuestas} de proposiciones m\'as simples, llamadas \emph{subproposiciones}, por medio de \emph{conectores l\'ogicos.} \pause Una proposici\'on se dice que es \emph{primitiva} si no puede descomponerse en proposiciones m\'as simples.
+\end{frame}
+
+\begin{frame}
+    Por ejemplo, las siguientes proposiciones son compuestas
+    \begin{itemize}
+        \item ``Las rosas son rojas y las violetas son azules''
+        \item ``Juan es inteligente y estud\'ia hasta muy noche''
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    La propiedad fundamental de una proposici\'on compuesta es que su valor de verdad est\'a completamente deteminado por los valores de verdad de sus subproposiciones y la manera en la cual est\'an conectadas para formar la proposici\'on compuesta. 
+\end{frame}
+
+\subsection{Operaciones L\'ogicas B\'asicas}
+
+\begin{frame}
+    En esta secci\'on discutiremos las tres operaciones l\'ogical b\'asicas: conjunci\'on , disjunci\'on  y la negaci\'on.
+\end{frame}
+
+\subsubsection{Conjunci\'on $p \wed q$}
+
+\begin{frame}
+    Cualesquiera dos proposiciones $p,q$ pueden ser combinadas por la palabra ``y'' para formar una proposici\'on compuesta llamada \emph{conjunci\'on} que se escribe $p\wed q.$
+\end{frame}
+
+\begin{frame}
+    \begin{defn}
+        Si tanto $p$ como $q$ son ciertas, entonces $p \wed q$ es cierta; en otro caso $p\wed q$ es falsa.
+    \end{defn}
+    
+\end{frame}
+
+\begin{frame}
+    \begin{rem}
+        Para entender mejor como se conectan los valores de verdad, generalmente se utilizan \emph{tablas de verdad.} \pause 
+        
+        Por brevedad $1$ representar\'a el valor \texttt{cierto}, mientras que $0$ representar\'a \texttt{falso}
+    \end{rem}
+    
+\end{frame}
+
+\begin{frame}
+    \begin{tdv}[Conjunci\'on]
+        \label{tdv:and}
+        \begin{center}
+            \begin{tabular}{|l|l|l|}\hline
+                $p$ & $q$ & $p \wed q$\\\hline
+                1 & 1 & 1\\\hline
+                1 & 0 & 0\\\hline
+                0 & 1 & 0\\\hline
+                0 & 0 & 0\\\hline
+            \end{tabular}
+        \end{center}
+        
+    \end{tdv}
+    
+\end{frame}
+
+\begin{frame}
+    En este curso, usaremos el \emph{sistema algebr\'aico de computo} \texttt{SageMath}, el cu\'al est\'a escrito con base en el lenguaje de programaci\'on \texttt{Python} e incorpora diversos paquetes de \texttt{OpenSource}.
+    \pause
+    
+    Puede acceder a este sistema, a trav\'es de \href{https://cloud.sagemath.com/}{https://cloud.sagemath.com/} 
+    
+\end{frame}
+
+\begin{frame}
+    Construimos la tabla de verdad de la conjunci\'on en el siguiente scritp \href{https://cloud.sagemath.com/projects/12787063-cafe-4f3b-a2e0-905f8b83cf3b/files/MD01_TRDV01_AND.sagews}{https://goo.gl/hEF5os}
+    \begin{center}
+        \includegraphics[height=5cm,keepaspectratio=true]{../MD_SMC/MD01_TDV01_AND.png}
+        % MD01_TDV01_AND.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+    \end{center}
+    
+\end{frame}
+
+\begin{frame}
+    \begin{exmp}
+        ?`Cu\'al de las siguientes proposiciones es cierta?
+        
+        \begin{enumerate}
+            \item El hielo flota y $2+2=4$
+            \item El hielo flota y $2+2=5$
+            \item China est\'a en Europa y $2+2=4$
+            \item China est\'a en Europa y $2+2=5$
+        \end{enumerate}
+        
+    \end{exmp}
+    
+\end{frame}
+
+\subsubsection{Disjunci\'on $p \wed q$}
+
+\begin{frame}
+    Cualesquiera dos proposiciones $p,q$ pueden ser combinadas por la palabra ``o'' para formar una proposici\'on compuesta llamada \emph{disjunci\'on} que se escribe $p \vee q .$
+\end{frame}
+
+\begin{frame}
+    \begin{defn}
+        Si tanto $p$ como $q$ son falsas, entonces $p \vee q$ es falsa; en otro caso $p\vee q$ es verdadera.
+    \end{defn}
+    
+\end{frame}
+
+
+\begin{frame}
+    \begin{tdv}[Disjunci\'on]
+        \label{tdv:or}
+        \begin{center}
+            \begin{tabular}{|l|l|l|}\hline
+                $p$ & $q$ & $p \wed q$\\\hline
+                V & V & V\\\hline
+                V & F & V\\\hline
+                F & V & V\\\hline
+                F & F & F\\\hline
+            \end{tabular}
+        \end{center}
+        
+    \end{tdv}
+    
+\end{frame}
+
+\begin{frame}
+    Construimos la tabla de verdad de la disjunci\'on en el siguiente scritp \href{https://cloud.sagemath.com/projects/12787063-cafe-4f3b-a2e0-905f8b83cf3b/files/MD01_TDV02_OR.sagews}{https://goo.gl/5kXzNI}
+    \begin{center}
+        \includegraphics[height=5cm,keepaspectratio=true]{../MD_SMC/MD01_TDV02_OR.png}
+        % MD01_TDV01_AND.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+    \end{center}
+    
+\end{frame}
+
+\begin{frame}
+ \begin{rem}
+  Algunas veces \texttt{``p o q''} se entiende en el sentido exclusivo: Puede ocurrir \texttt{p} o \texttt{q}, \emph{pero no ambos,} que es diferente a la definici\'on anterior. Sin embargo, existe un conector llamado de hecho \texttt{o exclusivo,} que cumple esta definici\'on y consideraremos m\'as adelante. 
+ \end{rem}
+
+\end{frame}
+
+\subsubsection{Negaci\'on $\neg p$}
+
+\begin{frame}
+ Dada cualquier proposici\'on $p,$ otra proposici\'on llamada \emph{negaci\'on} de $p$ puede ser formada escribien \emph{``No es cierto que...''} o \emph{``Es falso que...''} antes de \texttt{p}.
+ \pause
+ De manera m\'as sencilla, decimos \texttt{no $p$} y escribimos $\neg p.$
+\end{frame}
+
+\begin{frame}
+ 
+\begin{defn}[Negaci\'on]
+ Si $p$ es cierta, entonces $\neg p$ es falsa; pero si $p$ es falsa, $\neg p$ es cierta.
+\end{defn}
+
+\end{frame}
+
+\begin{frame}
+    \begin{tdv}[Negaci\'on]
+        \label{tdv:not}
+        \begin{center}
+            \begin{tabular}{|l|l|}\hline
+                $p$ & $\neg p$\\\hline
+                V & F \\\hline
+                F & V \\\hline
+            \end{tabular}
+        \end{center}
+        
+    \end{tdv}
+    
+\end{frame}
+
+\begin{frame}
+    Construimos la tabla de verdad de la disjunci\'on en el siguiente scritp \href{https://cloud.sagemath.com/projects/12787063-cafe-4f3b-a2e0-905f8b83cf3b/files/MD01_TDV03_NOT.sagews}{https://goo.gl/sgCfkC}
+    \begin{center}
+        \includegraphics[height=5cm,keepaspectratio=true]{../MD_SMC/MD01_TDV03_NOT.png}
+        % MD01_TDV01_AND.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+    \end{center}
+    
+\end{frame}
+
+\subsection{Proposiciones y Tablas de Verdad}
+
+\begin{frame}
+ Sea $P(p,q,...)$ una expresi\'on construida con variables l\'ogicas $p,q,...,$ que toman valores de \texttt{verdadero ``V''} o \texttt{falso ``F''}, a trav\'es de conectores l\'ogicos como $\wed, \, \vee, \, \neg$ y otros  que discutiremos m\'as adelante.
+ \pause
+ 
+ Tales expresiones $P(p,q,...)$ son llamadas \emph{proposiciones.}
+\end{frame}
+
+\begin{frame}
+ La propiedad principal de una proposici\'on $P(p,q,...)$ es que sus valores de verdad s\'olo dependen del valor de sus varibles. 
+ \pause
+ 
+ Una manera simple y concisa de mostrar esta relaci\'on es a trav\'es de una \emph{tabla de verdad.}
+\end{frame}
+
+\begin{frame}
+ \begin{exmp}
+  Contruir la tabla de verdad de la proposici\'on
+  $$\neg \left( p \wed \neg q \right).$$
+ \end{exmp}
+
+\end{frame}
+
+\begin{frame}
+ Construimos la tabla de verdad de la proposici\'on anterior con el siguiente script \href{https://goo.gl/V2Axzi}{https://goo.gl/V2Axzi}
+\begin{center}
+        \includegraphics[height=5cm,keepaspectratio=true]{../MD_SMC/MD01_TDV04.png}
+        % MD01_TDV01_AND.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+\end{center}
+ 
+\end{frame}
+
+\begin{frame}
+ \begin{tdv}[$\neg\left( p \wed \neg q \right)$] 
+  \begin{tabular}{lllll}
+p & q & not q & p and not q & not( p and not q) \\
+$\mathrm{True}$ & $\mathrm{True}$ & $\mathrm{False}$ & $\mathrm{False}$ & $\mathrm{True}$ \\
+$\mathrm{True}$ & $\mathrm{False}$ & $\mathrm{True}$ & $\mathrm{True}$ & $\mathrm{False}$ \\
+$\mathrm{False}$ & $\mathrm{True}$ & $\mathrm{False}$ & $\mathrm{False}$ & $\mathrm{True}$ \\
+$\mathrm{False}$ & $\mathrm{False}$ & $\mathrm{True}$ & $\mathrm{False}$ & $\mathrm{True}$ \\
+\end{tabular}
+ \end{tdv}
+
+\end{frame}
+
+\begin{frame}
+ \begin{rem}
+  Para evitar el uso excesivo de parentesis, algunas veces adoptamos una jerarqu\'ia para los conectores l\'ogicos. 
+  \pause
+  
+  De manera especifica\emph{$\neg$ tiene prioridad sobre $\wed,$ que a su vez tiene prioridad sobre $\vee$.}
+ \end{rem}
+\end{frame}
+
+\begin{frame}
+ Por ejemplo, $$\neg p \wed q$$ significa $$\left( \neg p \right) \wed q$$ \pause y no
+ $$
+ \neg(p \wed q).
+ $$
+\end{frame}
+
+\begin{frame}
+ \frametitle{M\'etodo alternativo de construir una tabla de verdad}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|l|}\hline
+ $p$ & $q$ & $\neg$ & $(p$ & $\wed$ & $\neg$ & q) \\\hline
+ $1$ & $1$ &  &  & &  & \\\hline
+ $1$ & $0$ &  &  & &  & \\\hline
+ $0$ & $1$ &  &  & &  & \\\hline
+ $0$ & $0$ &  &  & &  & \\\hline
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+\subsection{Tautolog\'ias y Contradicciones}
+
+\begin{frame}
+ Algunas proposiciones $P(p,q,...)$ son siempre ciertas, no importa los valores de verdad de las variables $p,q,...$ 
+ \pause 
+ 
+ Tales proposiciones se conocen como \emph{tautolog\'ias.}
+\end{frame}
+
+\begin{frame}
+ De manera similar, algunas proposiciones $P(p,q,...)$ son siempre falsas, no importa los valores de verdad de las variables $p,q,...$ 
+ \pause 
+ 
+ Tales proposiciones se conocen como \emph{contradicciones.}
+\end{frame}
+
+\begin{frame}
+ \begin{exmp}
+  Construya las tablas de verdad de $p \wed \neg p$ y $p \vee \neg p.$
+ \end{exmp}
+
+\end{frame}
+
+\subsection{Equivalencias L\'ogicas}
+
+\begin{frame}
+ Diremos que dos proposiciones $P(p,q,...)$ y $Q(p,q,...)$ son \emph{l\'ogicamente equivalentes} si tienen tablas de verdad identidas. 
+ \pause
+ 
+ En tal caso, escribimos $$P(p,q,..)\equiv Q(p,q,...)$$
+\end{frame}
+
+\begin{frame}
+ \begin{exmp} Demostremos que 
+  $$
+  \neg\left( p \wed q \right) \equiv \neg p \vee \neg q
+  $$
+ \end{exmp}
+
+\end{frame}
+
+\begin{frame}
+ \begin{exmp}
+  Reescriba la frase ``No es cierto que: las rosas son rojas y las violetas son azules'', usando la equivalencia anterior.
+ \end{exmp}
+
+\end{frame}
+
+%\subsection{\'Algebra de proposiciones}
+
+\begin{frame}
+ Por su utilidad, algunas equivalencias l\'ogias con llamadas \emph{leyes para el \'algebra de proposiciones.}
+ \pause
+ 
+ A continuaci\'on, enunciaremos algunas, pero es necesario verificar su validez a trav\'es de tablas de verdad. 
+\end{frame}
+
+\begin{frame}
+ \begin{figure}
+ \centering
+ \includegraphics[width=11cm,keepaspectratio=true]{./tabla_4-1.png}
+ % tabla_4-1.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \caption{Leyes para el álgebra de proposiciones}
+ \label{fig:tabla:4.1}
+\end{figure}
+
+\end{frame}
+
+\subsection{Proposiciones y Tablas de Verdad}
+
+\subsubsection{Ejercicios Resueltos}
+
+\begin{frame}
+ \begin{solved}
+  Sea $p:\texttt{``Hace fr\'io''}$ y $q:\texttt{``Est\'a lloviendo''.}$ Proponga un enunciado verbal simple que describa cada una de las siguientes proposiciones:
+  \begin{enumerate}
+   \item $\neg p;$
+   \item $p \wed q;$
+   \item $p \vee q;$
+   \item $q \vee \neg p.$
+  \end{enumerate}
+
+ \end{solved}
+
+\end{frame}
+
+\begin{frame}
+ \begin{solved}
+  Encuentre la tabla de verdad de $\neg p \wed q.$
+ \end{solved}
+
+\end{frame}
+
+\begin{frame}
+ \begin{solved}
+  Demuestre que la propisici\'on 
+  $$
+  p \vee \neg \left( p\wed q \right)
+  $$ es una tautolog\'ia.
+ \end{solved}
+
+\end{frame}
+
+\begin{frame}
+ \begin{solved}
+  Muestre que las proposiciones $\neg\left( p \wed q \right)$ y $\neg p \vee \neg q.$
+ \end{solved}
+
+\end{frame}
+
+\begin{frame}
+ \begin{solved}
+  Use las leyes en la tabla \ref{fig:tabla:4.1} para mostrar que 
+  $$
+  \neg \left( p \wed q \right) \vee \left( \neg p \wed  q \right) \equiv \neg p
+  $$
+ \end{solved}
+
+\end{frame}
+
+\end{document}
