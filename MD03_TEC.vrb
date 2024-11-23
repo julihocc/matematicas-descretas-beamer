@@ -1,0 +1,11 @@
+\frametitle{Implentaci\'on recursiva de \emph{Ackermann} en \texttt{Python}}
+ \begin{verbatim}
+def ack2(M, N):
+    if M == 0:
+        return N + 1
+    elif N == 0:
+        return ack2(M - 1, 1)
+    else:
+        return ack2(M - 1, ack2(M, N - 1))
+ \end{verbatim}
+ Para m\'as implementaciones, visite \href{http://rosettacode.org/wiki/Ackermann\_function}{rosettacode.org/wiki/Ackermann\_function}
