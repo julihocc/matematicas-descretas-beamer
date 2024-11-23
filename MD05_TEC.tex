@@ -68,8 +68,8 @@
 \AtBeginSubsection{\frame{\subsectionpage}}
 \AtBeginSubsubsection{\frame{\subsubsectionpage}}
 
-\input{./00-03-entorno.tex}
-\input{./00-01-comandos.tex}
+\input{./entorno.tex}
+\input{./comandos.tex}
 
 %\date{\today}
 \title{Teoría de Gráficas}
@@ -565,14 +565,15 @@
   \emph{grafo
     Hamiltoniano.}
 
-  \pause
+\end{frame}
+
+\begin{frame}
   \begin{rem}
     En la definición de circuito Hamiltoniano, cuando decimos que el camino
     \emph{visita} cada vértice exactamente una vez significa que, aunque el
     vértice inicial tiene que ser el mismo que el final, todos los demás
     vértices intermedios deben ser distintos.
   \end{rem}
-
 \end{frame}
 
 \begin{frame}
@@ -584,15 +585,15 @@
         vértices} exactamente una vez, pero las aristas pueden repetirse.
 
   \end{rem}
+\end{frame}
 
-  \pause
-
+\begin{frame}
   \begin{thm}
     Sea $G$ un grafo conexo con $n$ vértices. Entonces $G$ es Hamiltoniano si
     $n\geq 3$ y $n \leq \deg(v)$ para cada vértice $v$ en $G.$
   \end{thm}
-
 \end{frame}
+
 
 \begin{frame}
   \begin{figure}[h!]
