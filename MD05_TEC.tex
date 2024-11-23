@@ -97,7 +97,7 @@
 
 \begin{frame}
   Las matrices son arreglos rectangulares de n\'umero que nos ayudan a codificar
-  informaci\'on. Por ejemplo:
+  información. Por ejemplo:
   $$
     \begin{pmatrix}
       a_{1,1} & a_{1,2} \\
@@ -125,14 +125,14 @@
     \end{pmatrix}
   \end{equation} \pause
 
-  Los subíndices de cada elemento $a_{i,j}$ denotan la posici\'on del mismo:
-  $i$ es el n\'umero del \emph{rengl\'on} (contando de arriba a abajo), mientras
+  Los subíndices de cada elemento $a_{i,j}$ denotan la posición del mismo:
+  $i$ es el n\'umero del \emph{renglón} (contando de arriba a abajo), mientras
   que $j$ es el n\'umero de la columna (contanto de izquierda a derecha).
 \end{frame}
 
 \begin{frame}
   Podemos extraer renglones y columnas de la matrix \eqref{A}: El $i-$esímo
-  rengl\'on es
+  renglón es
   $$
     R_{i}=
     \begin{pmatrix}
@@ -151,7 +151,7 @@
 \end{frame}
 
 \begin{frame}
-  Diremos que la matriz \eqref{A} tiene dimensi\'on $m\times n.$ \pause
+  Diremos que la matriz \eqref{A} tiene dimensión $m\times n.$ \pause
 
   Si existe un conjunto de n\'umeros $F,$ tal que todos los elementos $a_{i,j}$
   de la matriz pertenecen a dicho conjunto, diremos que la matriz tiene
@@ -161,25 +161,25 @@
 \begin{frame}
   \begin{rem}
     Para que las operaciones entre matrices estén bien definidas, es necesario
-    que la suma, resta y multiplicaci\'on entre entre elementos de $F$ también
+    que la suma, resta y multiplicación entre entre elementos de $F$ también
     este bien definida. Por esto generalmente $F$ se elige como $\R$ o $\Z.$
   \end{rem}
 \end{frame}
 
 \begin{frame}
-  La colecci\'on de todas las matrices de dimensi\'on $m\times n$ con
+  La colección de todas las matrices de dimensión $m\times n$ con
   coeficientes en $F$ se denotará por $$M_{m,n}(F).$$
 \end{frame}
 
 \begin{frame}
   \begin{defn}
-    Las matrices de dimensi\'on $m\times 1$ se conocen como \emph{vectores
-      columna,} mientras que las de dimensi\'on $1\times n$ se conocen como
-    \emph{vectores rengl\'on.}
+    Las matrices de dimensión $m\times 1$ se conocen como \emph{vectores
+      columna,} mientras que las de dimensión $1\times n$ se conocen como
+    \emph{vectores renglón.}
     \pause
 
-    La colecci\'on $M_{m,1}(F)$ de todos los vectores columna con coeficientes
-    comunmente se denota por $F^{m}.$ \pause Mientras que la colecci\'on
+    La colección $M_{m,1}(F)$ de todos los vectores columna con coeficientes
+    comunmente se denota por $F^{m}.$ \pause Mientras que la colección
     $M_{1,n}(F)$ de todos los vectores columna con coeficientes  comunmente se
     denota por $F^{n\ast}.$
 
@@ -197,7 +197,7 @@
 \end{frame}
 
 \begin{frame}
-  Si $B=[b_{i,j}]$ es otra matriz de dimensi\'on $m\times n,$ la suma se define
+  Si $B=[b_{i,j}]$ es otra matriz de dimensión $m\times n,$ la suma se define
   como $$A+B=[a_{i.j}+b_{i,j}].$$\pause
 
   De manera similar, la resta se define como $$A-B=[a_{i,j}-b_{i,j}].$$
@@ -236,20 +236,20 @@
   tener exactamente las \emph{mismas dimensiones}. \pause
 
   Después de ver la facilidad para definir la suma y resta, uno se ve tentado a
-  definir la multiplicaci\'on de la misma forma. Pero tal definici\'on es poco
+  definir la multiplicación de la misma forma. Pero tal definición es poco
   \'util en las aplicaciones. \pause
 
-  Por esta raz\'on, desarrollaremos el concepto de multiplicaci\'on, a fin de
-  poder aplicar esta operaci\'on en la resoluci\'on de problemas.
+  Por esta razón, desarrollaremos el concepto de multiplicación, a fin de
+  poder aplicar esta operación en la resolución de problemas.
 \end{frame}
 
-\subsection{Multiplicaci\'on}
+\subsection{Multiplicación}
 \begin{frame}
   \begin{defn}
-    Sean $R=[R_{j}]$ un vector rengl\'on y $C=[C_{i}]$ un vector columna, ambos de
+    Sean $R=[R_{j}]$ un vector renglón y $C=[C_{i}]$ un vector columna, ambos de
     longitud $n.$
     \pause
-    El \emph{producto rengl\'on-columna} se define como
+    El \emph{producto renglón-columna} se define como
     \begin{equation}
       \label{RC}
       \tag{RC}
@@ -290,8 +290,8 @@
 
 \begin{frame}
   \begin{exmp}
-    Reescriba la siguiente ecuaci\'on, utilizando el \emph{producto
-      rengl\'on-columna}:
+    Reescriba la siguiente ecuación, utilizando el \emph{producto
+      renglón-columna}:
     $$2x-3y+z=0.$$
   \end{exmp}
 
@@ -309,7 +309,7 @@
         R_{i}C_{k}
       \end{pmatrix}
     \end{equation}
-    donde $R_{i}$ es el $i-$ésimo rengl\'on de $A$ y $C_{k}$ es la $k-$ésima
+    donde $R_{i}$ es el $i-$ésimo renglón de $A$ y $C_{k}$ es la $k-$ésima
     columna de $B.$
   \end{defn}
 
@@ -318,10 +318,10 @@
 \begin{frame}
   \begin{rem}
     \begin{itemize}
-      \item Para que esta multiplicaci\'on tenga sentido, los renglones de $A$ y
+      \item Para que esta multiplicación tenga sentido, los renglones de $A$ y
             las columnas de $B$ deberán tener la misma longitud $n.$
             \pause
-      \item La matriz resultante tendrá dimensi\'on $m \times l.$ \pause
+      \item La matriz resultante tendrá dimensión $m \times l.$ \pause
       \item A menos que $m=l,$ el producto $BA$ podría no estar definido. \pause
       \item Aun cuando $BA$ estuviera bien definido, el producto de matrices no es
             \emph{conmutativo,} es decir, generalmente tendremos que $$AB \neq BA.$$
@@ -444,8 +444,8 @@
 
 \begin{frame}
   \begin{exmp}
-    Rescriba el siguiente sistema de ecuaci\'on en forma matricial y encuentre su
-    soluci\'on:
+    Rescriba el siguiente sistema de ecuación en forma matricial y encuentre su
+    solución:
     $$
       \begin{cases}
         -x-3y=19 \\
@@ -463,7 +463,7 @@
   matemáticas usadas para modelar relaciones por pares entre objetos.
 \end{frame}
 
-\subsection{Definici\'on de grafo}
+\subsection{Definición de grafo}
 
 \begin{frame}{Concepto de gráfo}
   Un \emph{grafo} $G$ consiste de:
@@ -480,7 +480,7 @@
 
 \begin{frame}
   \begin{rem}
-    Debido a una ambig\"uedad en la traducci\'on del inglés al espa\~nol, en
+    Debido a una ambig\"uedad en la traducción del inglés al espa\~nol, en
     ocasiones, a un grafo también se le conoce como \emph{gráfica,} que se
     puede confundir con el concepto de teoría de conjuntos. En este material, a
     veces utilizaremos \textit{gráfica,} pero debe entenderse como un grafo.
@@ -507,7 +507,7 @@
 \end{frame}
 
 \begin{frame}
-  Tales diagramas son llamados \emph{multigrafos;} \pause la definici\'on formal
+  Tales diagramas son llamados \emph{multigrafos;} \pause la definición formal
   de grafo no admite aristas multiples ni bucles.
 \end{frame}
 
@@ -577,7 +577,7 @@
 
 \begin{frame}
   \begin{rem}
-    A menos que se indique de otra manera, s\'olo trataremos con grafos finitos.
+    A menos que se indique de otra manera, sólo trataremos con grafos finitos.
   \end{rem}
 
 \end{frame}
@@ -614,7 +614,7 @@
 
 \begin{frame}{Grafos isomorfos}
   Dos grafos $G(V,E)$ y $G^{*}(V^{*},E^{*})$ son llamados \emph{isomorfos} si
-  existe una funci\'on biyectiva $f: V \to V^{*}$ tal que: $\set{u,v}$ es una
+  existe una función biyectiva $f: V \to V^{*}$ tal que: $\set{u,v}$ es una
   arista de $G$ si y solo si $\set{f(u),f(v)}$ es una arista de $G^{*}.$
   \pause
 
@@ -657,7 +657,7 @@
 \subsection{Caminos y conexidad}
 
 \begin{frame}
-  Un \emph{camino} en un (multi)grafo $G$ consiste en una sucesi\'on alternante
+  Un \emph{camino} en un (multi)grafo $G$ consiste en una sucesión alternante
   de vértices y arista de la forma
   $$
     v_{0}, e_{1}, v_{1}, ..., e_{n-1}, v_{n-1}, e_{n}, v_{n}
@@ -667,8 +667,8 @@
 
 \begin{frame}
   \begin{rem}
-    Observe que en grafo, podemos simplificar la notaci\'on para un camino,
-    indicando s\'olo los vértices que recorre:
+    Observe que en grafo, podemos simplificar la notación para un camino,
+    indicando sólo los vértices que recorre:
     $$v_{0}, v_{1},..., v_{n}.$$
   \end{rem}
 \end{frame}
@@ -685,7 +685,7 @@
 \end{frame}
 
 \begin{frame}
-  La \emph{longitud} de un camino es igual a n\'umero de aristas en la sucesi\'on
+  La \emph{longitud} de un camino es igual a n\'umero de aristas en la sucesión
   que lo define.
   \pause
 \end{frame}
@@ -805,12 +805,12 @@
 \begin{frame}
   \begin{rem}
     Formalmente, permitiendo que un vértice $u$ esté conectado consigo mismo,
-    la relaci\'on \begin{center}
+    la relación \begin{center}
       \texttt{$u$ está conectado con $v$}
 
     \end{center}
-    es una relaci\'on de equivalencia en el conjunto de vértices del grafo $G,$
-    \pause y las clases de equivalencia de esta relaci\'on son las componentes
+    es una relación de equivalencia en el conjunto de vértices del grafo $G,$
+    \pause y las clases de equivalencia de esta relación son las componentes
     conexas de $G.$
   \end{rem}
 
@@ -856,14 +856,14 @@
     \centering
     \includegraphics[width=10cm,keepaspectratio=true]{./grafo_8_10.png}
     % grafo_8_10.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
-    \caption{Puentes de K\"onigsberg y su representaci\'on}
+    \caption{Puentes de K\"onigsberg y su representación}
     \label{fig:md0506}
   \end{figure}
 \end{frame}
 
 \begin{frame}
   Un multigrafo es llamado \emph{transitable} si existe un \emph{paseo} (un
-  camino d\'onde todos las aristas son diferentes), que incluye \emph{todos los
+  camino dónde todos las aristas son diferentes), que incluye \emph{todos los
     vértices y todas las aristas.}
 
   Tal paseo será llamado  \emph{paseo transitable}.
@@ -902,7 +902,7 @@
 \end{frame}
 
 \begin{frame}{Grafos hamiltonianos}
-  En la definici\'on de grafos Eulerianos se enfatiz\'o pasar por todas las
+  En la definición de grafos Eulerianos se enfatizó pasar por todas las
   aristas.
   \pause
 
@@ -919,7 +919,7 @@
 
   \pause
   \begin{rem}
-    En la definici\'on de circuito Hamiltoniano, cuando decimos que el camino
+    En la definición de circuito Hamiltoniano, cuando decimos que el camino
     \emph{visita} cada vértice exactamente una vez significa que, aunque el
     vértice inicial tiene que ser el mismo que el final, todos los demás
     vértices intermedios deben ser distintos.
@@ -966,7 +966,7 @@
   $$
 
   Entonces, la \emph{matriz de adyacencia} $A=\left( a_{i,j} \right)$ del grafo
-  $G$ es la matriz de dimensi\'on $m\times m$ definida por:
+  $G$ es la matriz de dimensión $m\times m$ definida por:
   $$a_{i,j}=
     \begin{cases}
       1 & v_{i}\texttt{ es adyacente a }v_{j} \\
@@ -990,7 +990,7 @@
 
 \begin{frame}
   Los \emph{grafos dirigidos} o \emph{digrafos} son grafos en los que las aristas
-  tienen una direcci\'on.
+  tienen una dirección.
 \end{frame}
 
 \subsection{Grafos dirigidos}
@@ -1062,10 +1062,10 @@
 \subsection{Matriz de adyacencia}
 
 \begin{frame}
-  Ahora, s\'olo consideraremos \emph{digrafos simples} $G(V,E)$, es decir, sin
-  aristas paralelas. Entonces $E$ es simplemente una relaci\'on en $V.$ \pause
+  Ahora, sólo consideraremos \emph{digrafos simples} $G(V,E)$, es decir, sin
+  aristas paralelas. Entonces $E$ es simplemente una relación en $V.$ \pause
 
-  De manera inversa, si $R$ es una relaci\'on en $V,$ entonces $G(V,R)$ es un
+  De manera inversa, si $R$ es una relación en $V,$ entonces $G(V,R)$ es un
   digrafo simple.\pause
 
   En unidades anteriores, ya hemos construido digrafos asociados a relaciones de
@@ -1078,7 +1078,7 @@
     v_{2},...,v_{m}.$ \pause
 
   Entonces la \emph{matrix de adyacencia} $A=\left( a_{i,j} \right)$ de $G$ es la
-  una matriz de dimensi\'on $m\times m$ definida de la siguiente manera
+  una matriz de dimensión $m\times m$ definida de la siguiente manera
   $$a_{i,j}=
     \begin{cases}
       1 & \exists e \in E: e=(v_{i}, v_{j}) \\
@@ -1114,7 +1114,7 @@
 \end{frame}
 
 \begin{frame}
-  La matriz identidad $I_{m}=\left( I_{i,j} \right)$ de dimensi\'on $m\times m$
+  La matriz identidad $I_{m}=\left( I_{i,j} \right)$ de dimensión $m\times m$
   se define como
   $$I_{i,j}
     \begin{cases}
@@ -1148,7 +1148,7 @@
 
 \begin{frame}
   La propiedad principal de una matriz identidad $I_{m}$ es que es nuestra
-  respecto a la multiplicaci\'on de matrices\pause, es decir, para cualquier otra
+  respecto a la multiplicación de matrices\pause, es decir, para cualquier otra
   matriz $A\in M_{n}:$
   $$
     AI_{n}=I_{n}A=A.
@@ -1170,7 +1170,7 @@
 \end{frame}
 
 \begin{frame}
-  Definamos $a_{k}(i,j)$ como la entrada en la posici\'on $i,j$ de $A^{k}.$
+  Definamos $a_{k}(i,j)$ como la entrada en la posición $i,j$ de $A^{k}.$
   \pause
 
   \begin{prop}
