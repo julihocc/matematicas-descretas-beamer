@@ -96,7 +96,7 @@
 \section{Matrices}
 
 \begin{frame}
-  Las matrices son arreglos rectangulares de n\'umero que nos ayudan a codificar
+  Las matrices son arreglos rectangulares de número que nos ayudan a codificar
   información. Por ejemplo:
   $$
     \begin{pmatrix}
@@ -104,7 +104,7 @@
       a_{2,1} & a_{2,2}
     \end{pmatrix}
   $$
-  puede ser \'util para codificar los coeficientes del sistema de ecuaciones:
+  puede ser útil para codificar los coeficientes del sistema de ecuaciones:
   $$
     \begin{cases}
       a_{1,1}x+a_{1,2}y=b_{1} \\
@@ -126,8 +126,8 @@
   \end{equation} \pause
 
   Los subíndices de cada elemento $a_{i,j}$ denotan la posición del mismo:
-  $i$ es el n\'umero del \emph{renglón} (contando de arriba a abajo), mientras
-  que $j$ es el n\'umero de la columna (contanto de izquierda a derecha).
+  $i$ es el número del \emph{renglón} (contando de arriba a abajo), mientras
+  que $j$ es el número de la columna (contanto de izquierda a derecha).
 \end{frame}
 
 \begin{frame}
@@ -153,7 +153,7 @@
 \begin{frame}
   Diremos que la matriz \eqref{A} tiene dimensión $m\times n.$ \pause
 
-  Si existe un conjunto de n\'umeros $F,$ tal que todos los elementos $a_{i,j}$
+  Si existe un conjunto de números $F,$ tal que todos los elementos $a_{i,j}$
   de la matriz pertenecen a dicho conjunto, diremos que la matriz tiene
   coeficientes en $F.$ \pause
 \end{frame}
@@ -237,7 +237,7 @@
 
   Después de ver la facilidad para definir la suma y resta, uno se ve tentado a
   definir la multiplicación de la misma forma. Pero tal definición es poco
-  \'util en las aplicaciones. \pause
+  útil en las aplicaciones. \pause
 
   Por esta razón, desarrollaremos el concepto de multiplicación, a fin de
   poder aplicar esta operación en la resolución de problemas.
@@ -522,7 +522,7 @@
 
 \begin{frame}{Grado de un vértice}
   El \emph{grado} de un vértice $v$ es un grafo $G,$ denotado por $\deg(v),$ es
-  igual al n\'umero de aristas in $G$ que contienen a $v,$ es decir, que
+  igual al número de aristas in $G$ que contienen a $v,$ es decir, que
   \emph{inciden} en $v.$
 \end{frame}
 
@@ -531,7 +531,7 @@
   resultado simple pero importante:
   \begin{thm}
     La suma de los grados de los vértices en un grafo $G$ es el doble del
-    n\'umero de aristas.
+    número de aristas.
   \end{thm}
 
 \end{frame}
@@ -542,7 +542,7 @@
     $$\deg(A)=2, \; \deg(B)=3,\; \deg(C)=3, \; \deg(D)=2.$$
     \pause
 
-    La suma de los grados es igual a 10, que es dos veces el n\'umero de aristas.
+    La suma de los grados es igual a 10, que es dos veces el número de aristas.
   \end{exmp}
 
 \end{frame}
@@ -565,13 +565,13 @@
 \end{frame}
 
 \begin{frame}{Gráfos finitos y triviales}
-  Diremos que un grafo  es \emph{finito} si tiene un n\'umero finito de
-  vértices y un n\'umero finito de aristas. \pause
+  Diremos que un grafo  es \emph{finito} si tiene un número finito de
+  vértices y un número finito de aristas. \pause
 
-  Observe que un n\'umero finito de vértices implica un n\'umero finito de
+  Observe que un número finito de vértices implica un número finito de
   aristas; pero no lo contrario no es necesariamente cierto. \pause
 
-  Diremos que un grafo con un \'unico vértice, sin aristas,  es
+  Diremos que un grafo con un único vértice, sin aristas,  es
   \emph{trivial.}\
 \end{frame}
 
@@ -618,7 +618,7 @@
   arista de $G$ si y solo si $\set{f(u),f(v)}$ es una arista de $G^{*}.$
   \pause
 
-  La idea es que estos grafos son equivalentes, a\'un cuando sus representaciones
+  La idea es que estos grafos son equivalentes, aún cuando sus representaciones
   pueden lucir muy diferentes.
 \end{frame}
 
@@ -685,7 +685,7 @@
 \end{frame}
 
 \begin{frame}
-  La \emph{longitud} de un camino es igual a n\'umero de aristas en la sucesión
+  La \emph{longitud} de un camino es igual a número de aristas en la sucesión
   que lo define.
   \pause
 \end{frame}
@@ -758,7 +758,7 @@
     % grafo_8_8_a.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
   \end{figure}
   $\del$ es un camino simple de $P_{4}$ a $P_{6},$ pero no es el camino más
-  corto, es decir, con el meno n\'umero de aristas. ?`Cuál es el camino más
+  corto, es decir, con el meno número de aristas. ?`Cuál es el camino más
   corto?
 \end{frame}
 
@@ -1021,7 +1021,7 @@
 \end{frame}
 
 \begin{frame}
-  Si las aristas o los vértices de un digrafo están etiquetas con alg\'un
+  Si las aristas o los vértices de un digrafo están etiquetas con algún
   tipo de dato, diremos que es un \emph{digrafo etiquetado.}
   \pause
 
@@ -1175,7 +1175,7 @@
 
   \begin{prop}
     Sea $A$ la matriz de adyacencia de un grafo $G.$ Entonces $a_{k}(i,j)$ es
-    igual al n\'umero de caminos de longitud $k$ que van de $v_{i}$ a $v_{j}.$
+    igual al número de caminos de longitud $k$ que van de $v_{i}$ a $v_{j}.$
   \end{prop}
 
 \end{frame}
@@ -1241,7 +1241,7 @@
   \begin{rem}
     Si definimos
     $$B_{r}= \sum_{i=1}^{r}A^{i},$$
-    entonces la entrada $i,j$ de esta matriz nos indicará el n\'umero de caminos
+    entonces la entrada $i,j$ de esta matriz nos indicará el número de caminos
     de longitud a lo más $r$ de $v_{i}$ a $v_{j}.$
   \end{rem}
 \end{frame}
