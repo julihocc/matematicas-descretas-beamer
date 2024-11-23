@@ -24,9 +24,6 @@
 *.nav 
 *.snm
 
-# PDF files
-*.pdf
-
 # Backup files
 *~
 *.bak
