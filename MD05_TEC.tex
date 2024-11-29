@@ -159,17 +159,6 @@
 \end{frame}
 
 \begin{frame}
-  \begin{figure}[h!]
-    \centering
-    \includegraphics[width=12cm,keepaspectratio=true]{./grafos.png}
-    % grafos.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
-    \caption{Grafos y multigrafos}
-    \label{fig:md0501}
-  \end{figure}
-
-\end{frame}
-
-\begin{frame}
   \centering
   \begin{tikzpicture}[scale=1, auto, node distance=2cm, thick]
 
@@ -218,7 +207,7 @@
 
 \begin{frame}
   \begin{rem}
-    Sin embargo, algunos textos utilizan ``grafos'' para referirse a lo que
+    Algunos textos utilizan ``grafos'' para referirse a lo que
     nosotros llamaremos multigrafos, mientras que ocupan ``grafo simple'' para
     lo
     que nosotros llamaremos grafos.
@@ -235,16 +224,20 @@
 \begin{frame}
   Dado que cada arista incide en dos vértices diferentes, tenemos el siguiente
   resultado simple pero importante:
-  \begin{thm}
-    La suma de los grados de los vértices en un grafo $G$ es el doble del
-    número de aristas.
-  \end{thm}
+
 
 \end{frame}
 
 \begin{frame}
+  \begin{thm}
+    La suma de los grados de los vértices en un grafo $G$ es el doble del
+    número de aristas.
+  \end{thm}
+\end{frame}
+
+\begin{frame}
   \begin{exmp}
-    En el grafo de la figura \ref{fig:md0501}(a), tenemos que
+    En el grafo de la figura \ref{graph:01}, tenemos que
     $$\deg(A)=2, \; \deg(B)=3,\; \deg(C)=3, \; \deg(D)=2.$$
 
     La suma de los grados es igual a 10, que es dos veces el número de aristas.
@@ -257,10 +250,13 @@
     Diremos que un vértice es \emph{par} o \emph{impar} de acuerdo a la paridad
     de su grado.
 
-    En el ejemplo anterior, tanto $A$ com $D$ son vértices pares, mientras que
-    $B$ y $C$ son impares.
   \end{defn}
 
+\end{frame}
+
+\begin{frame} 
+  En el ejemplo anterior, tanto $A$ com $D$ son vértices pares, mientras que
+  $B$ y $C$ son impares.
 \end{frame}
 
 \begin{frame}
@@ -273,12 +269,21 @@
   Diremos que un grafo	es \emph{finito} si tiene un número finito de
   vértices y un número finito de aristas.
 
+
+\end{frame}
+
+\begin{frame}
   Observe que un número finito de vértices implica un número finito de
   aristas; pero no lo contrario no es necesariamente cierto.
 
-  Diremos que un grafo con un único vértice, sin aristas,  es
-  \emph{trivial.}\
+
 \end{frame}
+
+\begin{frame}
+
+  Diremos que un grafo con un único vértice, sin aristas,  es
+  \emph{trivial.}
+  \end{frame}
 
 \begin{frame}
   \begin{rem}
