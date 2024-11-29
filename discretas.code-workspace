@@ -7,6 +7,23 @@
 	"settings": {
 		"editor.defaultFormatter": "James-Yu.latex-workshop",
 		"editor.formatOnPaste": true,
-		"editor.formatOnSave": true
+		"editor.formatOnSave": true,
+		"latex-workshop.bibtex-fields.sort.enabled": true,
+		"latex-workshop.formatting.latex": "latexindent",
+		"latex-workshop.latex.autoBuild.run": "onSave",
+		"latex-workshop.latex.autoClean.run": "never",
+		"latex-workshop.latex.clean.subfolder.enabled": true,
+		"latex-workshop.view.autoFocus.enabled": true,
+		"latex-workshop.bibtex-format.sort.enabled": true,
+		"latex-workshop.intellisense.subsuperscript.enabled": true,
+		"latex-workshop.intellisense.unimathsymbols.enabled": true,
+		"latex-workshop.intellisense.update.aggressive.enabled": true,
+		"latex-workshop.mathpreviewpanel.cursor.enabled": true,
+		"latex-workshop.view.pdf.hand": true,
+		"latex-workshop.synctex.afterBuild.enabled": true,
+		"latex-workshop.view.outline.sync.viewer": true,
+		"latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
+		"workbench.editor.sharedViewState": true,
+		"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true
 	}
 }
