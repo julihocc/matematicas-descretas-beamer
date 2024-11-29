@@ -129,14 +129,14 @@
 
 \begin{frame}{Multigrafos}
   Consideremos la figura \ref{fig:md0501} (b). Las aristas $e_{4}$y $e_{5}$ son
-  llamadas \emph{aristas multiples} ya que conectan los mismos extremos, \pause
+  llamadas \emph{aristas multiples} ya que conectan los mismos extremos, 
   mientras que la arista $e_{6}$ es llamada \emph{bucle} ya que conecta un
   vértice consigo mismo.
 
 \end{frame}
 
 \begin{frame}
-  Tales diagramas son llamados \emph{multigrafos;} \pause la definición formal
+  Tales diagramas son llamados \emph{multigrafos;}  la definición formal
   de grafo no admite aristas multiples ni bucles.
 \end{frame}
 
@@ -170,7 +170,7 @@
   \begin{exmp}
     En el grafo de la figura \ref{fig:md0501}(a), tenemos que
     $$\deg(A)=2, \; \deg(B)=3,\; \deg(C)=3, \; \deg(D)=2.$$
-    \pause
+    
 
     La suma de los grados es igual a 10, que es dos veces el número de aristas.
   \end{exmp}
@@ -181,7 +181,7 @@
   \begin{defn}
     Diremos que un vértice es \emph{par} o \emph{impar} de acuerdo a la paridad
     de su grado.
-    \pause
+    
     En el ejemplo anterior, tanto $A$ com $D$ son vértices pares, mientras que
     $B$ y $C$ son impares.
   \end{defn}
@@ -196,10 +196,10 @@
 
 \begin{frame}{Gráfos finitos y triviales}
   Diremos que un grafo	es \emph{finito} si tiene un número finito de
-  vértices y un número finito de aristas. \pause
+  vértices y un número finito de aristas. 
 
   Observe que un número finito de vértices implica un número finito de
-  aristas; pero no lo contrario no es necesariamente cierto. \pause
+  aristas; pero no lo contrario no es necesariamente cierto. 
 
   Diremos que un grafo con un único vértice, sin aristas,  es
   \emph{trivial.}\
@@ -234,11 +234,11 @@
           \emph{inducido}
           por sus vértices $V'$ si el conjunto de aristas $E'$ contiene todas
           las
-          aristas en $G$ cuyo extremos pertenecen a los vértices en $H.$ \pause
+          aristas en $G$ cuyo extremos pertenecen a los vértices en $H.$ 
     \item Si $v$ es un vértice en $G,$ entonces \emph{$G-v$} es el subgrafo de
           $G$ ontenido al borrar $v$ de $G$ y todas las aristas en $G$ que
           inciden en
-          $v.$ \pause
+          $v.$ 
     \item Si $e$ es una arista en $G,$ entonces \emph{$G-e$} es el subgrafo de
           $G$
           obtenido borrando la arista $e$ en $G.$
@@ -250,7 +250,7 @@
   Dos grafos $G(V,E)$ y $G^{*}(V^{*},E^{*})$ son llamados \emph{isomorfos} si
   existe una función biyectiva $f: V \to V^{*}$ tal que: $\set{u,v}$ es una
   arista de $G$ si y solo si $\set{f(u),f(v)}$ es una arista de $G^{*}.$
-  \pause
+  
 
   La idea es que estos grafos son equivalentes, aún cuando sus representaciones
   pueden lucir muy diferentes.
@@ -270,7 +270,7 @@
 \begin{frame}{Grafos homeomorfos}
   Dado un grafo $G,$ podemos obtener un nuevo grafo dividiendo una arista de
   $G$
-  con vértices adicionales. \pause
+  con vértices adicionales. 
 
   Dos grafos $G$ y $G^{*}$ son llamados \emph{homeomorfos} si pueden obtenerse
   de
@@ -314,25 +314,25 @@
   Diremos que el camino es \emph{cerrado} si $v_{n}=v_{0}.$ En otro caso,
   diremos
   que el camino conecta $v_{0}$ con $v_{n}.$
-  \pause
+  
 
   Un \emph{camino simple} es aquel en el cual todos los vértices son distintos.
   Mientras que un camino en el que todas las aristas son distintas se llama
   \emph{paseo}.
-  \pause
+  
 \end{frame}
 
 \begin{frame}
   La \emph{longitud} de un camino es igual a número de aristas en la sucesión
   que lo define.
-  \pause
+  
 \end{frame}
 
 \begin{frame}
   Un \emph{ciclo} es un camino cerrado de \emph{longitud} al menos 3, en el que
   todos los vértices son distintos, excepto el inicial $v_{0}$ y el final
   $v_{n}.$
-  \pause
+  
 
   Un ciclo de longitud $k$ es llamado \emph{$k-$ciclo.}
 \end{frame}
@@ -408,7 +408,7 @@
 \begin{frame}
   Eliminando aristas innecesarias, no es difícil ver que cualquier camino de
   $u$ a $v$ puede ser reemplazado por un camino simple.
-  \pause
+  
 
   Formalmente:
   \begin{thm}
@@ -420,7 +420,7 @@
 
 \begin{frame}{Conexidad y componentes conexas}
   Un grafo $G$ es conexo si existe un camino entre cualesquiera dos vértices.
-  \pause Por ejemplo, el grafo \ref{fig:md0504}(a) es conexo, pero no así el
+   Por ejemplo, el grafo \ref{fig:md0504}(a) es conexo, pero no así el
   grafo \ref{fig:md0504}(b).
   \begin{figure}[h!]
     \centering
@@ -433,7 +433,7 @@
 \begin{frame}
   Consideremos un grafo $G.$ Un subgrafo conexo $H$ de $G$ es llamado
   \emph{componente conexa} de $G$ si $H$ no está contenido de manera propia en
-  cualquier otro grafo conexo de $G.$\pause
+  cualquier otro grafo conexo de $G.$
 
   Por ejemplo, el grafo \ref{fig:md0504}(b) tiene tres componentes conexas.
 
@@ -453,7 +453,7 @@
 
     \end{center}
     es una relación de equivalencia en el conjunto de vértices del grafo $G,$
-    \pause y las clases de equivalencia de esta relación son las componentes
+     y las clases de equivalencia de esta relación son las componentes
     conexas de $G.$
   \end{rem}
 
@@ -512,7 +512,7 @@
     vértices y todas las aristas.}
 
   Tal paseo será llamado  \emph{paseo transitable}.
-  \pause
+  
 
   \begin{rem}
     De manera equivalente, un paseo transitable es un camino en el que todos
@@ -536,9 +536,9 @@
   Un grafo $G$ es llamado \emph{grafo Euleriano} si existe un \emph{paseo
     transitable cerrado}.
 
-  \pause
+  
   A tal paseo le llamaremos \emph{paseo Euleriano.}
-  \pause
+  
 
   \begin{thm}[Euler]
     Un grafo conexo y finito es Euleriano si y solo si cada vértice tiene grado
@@ -550,7 +550,7 @@
 \begin{frame}{Grafos hamiltonianos}
   En la definición de grafos Eulerianos se enfatizó pasar por todas las
   aristas.
-  \pause
+  
 
   Ahora, nos enfocaremos en visitar todos los vértices.
 \end{frame}
@@ -559,7 +559,7 @@
   Un \emph{circuito Hamiltoniano} es un grafo $G$ es un camino cerrado que
   visita
   cada vértice en $G$ \emph{exactamente} una vez.
-  \pause
+  
 
   Si $G$ admite un circuito Hamiltoniano, entonces $G$ es llamado un
   \emph{grafo
@@ -667,7 +667,7 @@
     \item $v$ es un sucesor de $u;$
     \item $u$ es adyacente a $v$ y $v$ es adyacente desde $u.$
   \end{itemize}
-  \pause
+  
 
   Si $u=v,$ $e$ es llamado un \emph{bucle.}
 \end{frame}
@@ -675,7 +675,7 @@
 \begin{frame}
   Si las aristas o los vértices de un digrafo están etiquetas con algún
   tipo de dato, diremos que es un \emph{digrafo etiquetado.}
-  \pause
+  
 
   De manera similar a un grafo, un digrafo será finito si el conjunto de
   vértices y el de aristas es finito.
@@ -715,10 +715,10 @@
 
 \begin{frame}
   Ahora, sólo consideraremos \emph{digrafos simples} $G(V,E)$, es decir, sin
-  aristas paralelas. Entonces $E$ es simplemente una relación en $V.$ \pause
+  aristas paralelas. Entonces $E$ es simplemente una relación en $V.$ 
 
   De manera inversa, si $R$ es una relación en $V,$ entonces $G(V,R)$ es un
-  digrafo simple.\pause
+  digrafo simple.
 
   En unidades anteriores, ya hemos construido digrafos asociados a relaciones
   de
@@ -728,7 +728,7 @@
 \begin{frame}
   Supongamos que $G$ es un digrafo simple con $m$ vértices, y supongamos que
   los vértices de $G$ han sido ordenados y son llamados $v_{1},
-    v_{2},...,v_{m}.$ \pause
+    v_{2},...,v_{m}.$ 
 
   Entonces la \emph{matrix de adyacencia} $A=\left( a_{i,j} \right)$ de $G$ es
   la
@@ -744,7 +744,7 @@
 \begin{frame}
   \begin{rem}
     Las matrices de adyacencia de un mismo grafo dependen del orden en que se
-    enumeren los vértices. \pause
+    enumeren los vértices. 
     Sin embargo, dos matrices de adyacencia de un mismo grafo están
     relacionadas por operaciones elementales: cambiar el orden de columnas y
     renglones.
@@ -775,7 +775,7 @@
       1 & i=j       \\
       0 & i \neq j,
     \end{cases}
-  $$\pause
+  $$
   es decir, es matriz cuadrangular con $1's$ en la \emph{diagonal principal}, y
   ceros en cualquier otra entrada.
 \end{frame}
@@ -802,7 +802,7 @@
 
 \begin{frame}
   La propiedad principal de una matriz identidad $I_{m}$ es que es nuestra
-  respecto a la multiplicación de matrices\pause, es decir, para cualquier otra
+  respecto a la multiplicación de matrices, es decir, para cualquier otra
   matriz $A\in M_{n}:$
   $$
     AI_{n}=I_{n}A=A.
@@ -818,14 +818,14 @@
       I_{n}    & n=0       \\
       AA^{n-1} & n \in \N.
     \end{cases}
-  $$ \pause
+  $$ 
 
   Es decir, $$A^{0}=I, A^{1}=A, A^{2}=AA,...$$
 \end{frame}
 
 \begin{frame}
   Definamos $a_{k}(i,j)$ como la entrada en la posición $i,j$ de $A^{k}.$
-  \pause
+  
 
   \begin{prop}
     Sea $A$ la matriz de adyacencia de un grafo $G.$ Entonces $a_{k}(i,j)$ es
@@ -913,7 +913,7 @@
         7  & 0 & 4 & 7
       \end{array}\right)
   \end{equation}
-  \pause
+  
 
   ?`Existe alguna manera de llegar al vertice $v_{2}$ desde el vértice $v_{1}$,
   sin importar la longitud del camino?
@@ -1018,7 +1018,7 @@
       \vdots  &         &        & \vdots  \\
       a_{m,1} & a_{m,2} & \cdots & a_{m,n}
     \end{pmatrix}
-  \end{equation} \pause
+  \end{equation} 
 
   Los subíndices de cada elemento $a_{i,j}$ denotan la posición del mismo:
   $i$ es el número del \emph{renglón} (contando de arriba a abajo), mientras
@@ -1033,7 +1033,7 @@
     \begin{pmatrix}
       a_{i,1} & \cdots & a_{i,n}
     \end{pmatrix}
-  \] \pause
+  \] 
   mientras que la $j-$ésima columna será
   \[
     C_{j}=
@@ -1046,11 +1046,11 @@
 \end{frame}
 
 \begin{frame}
-  Diremos que la matriz \eqref{A} tiene dimensión $m\times n.$ \pause
+  Diremos que la matriz \eqref{A} tiene dimensión $m\times n.$ 
 
   Si existe un conjunto de números $F,$ tal que todos los elementos $a_{i,j}$
   de la matriz pertenecen a dicho conjunto, diremos que la matriz tiene
-  coeficientes en $F.$ \pause
+  coeficientes en $F.$ 
 \end{frame}
 
 \begin{frame}
@@ -1072,10 +1072,10 @@
     Las matrices de dimensión $m\times 1$ se conocen como \emph{vectores
       columna,} mientras que las de dimensión $1\times n$ se conocen como
     \emph{vectores renglón.}
-    \pause
+    
 
     La colección $M_{m,1}(F)$ de todos los vectores columna con coeficientes
-    comunmente se denota por $F^{m}.$ \pause Mientras que la colección
+    comunmente se denota por $F^{m}.$  Mientras que la colección
     $M_{1,n}(F)$ de todos los vectores columna con coeficientes  comunmente se
     denota por $F^{n\ast}.$
 
@@ -1085,7 +1085,7 @@
 \subsection{Operaciones elementales}
 
 \begin{frame}
-  Por brevedad, la matriz \eqref{A} se denota por $A=[a_{i,j}].$ \pause
+  Por brevedad, la matriz \eqref{A} se denota por $A=[a_{i,j}].$ 
 
   En el caso de los vectores renglones y columnas, podemos omitir el subíndice
   fijo
@@ -1094,7 +1094,7 @@
 
 \begin{frame}
   Si $B=[b_{i,j}]$ es otra matriz de dimensión $m\times n,$ la suma se define
-  como $$A+B=[a_{i.j}+b_{i,j}].$$\pause
+  como $$A+B=[a_{i.j}+b_{i,j}].$$
 
   De manera similar, la resta se define como $$A-B=[a_{i,j}-b_{i,j}].$$
 \end{frame}
@@ -1111,7 +1111,7 @@
         7 & 0  & -1 \\
         2 & -1 & 5
       \end{pmatrix} =
-    $$ \pause
+    $$ 
     $$
       \begin{pmatrix}
         1 & -1 & 0  \\
@@ -1130,11 +1130,11 @@
 \begin{frame}
   Observe que para que la \emph{suma y resta} tenga sentido, ambas matrices
   deben
-  tener exactamente las \emph{mismas dimensiones}. \pause
+  tener exactamente las \emph{mismas dimensiones}. 
 
   Después de ver la facilidad para definir la suma y resta, uno se ve tentado a
   definir la multiplicación de la misma forma. Pero tal definición es poco
-  útil en las aplicaciones. \pause
+  útil en las aplicaciones. 
 
   Por esta razón, desarrollaremos el concepto de multiplicación, a fin de
   poder aplicar esta operación en la resolución de problemas.
@@ -1146,7 +1146,7 @@
     Sean $R=[R_{j}]$ un vector renglón y $C=[C_{i}]$ un vector columna, ambos
     de
     longitud $n.$
-    \pause
+    
     El \emph{producto renglón-columna} se define como
     \begin{equation}
       \label{RC}
@@ -1219,10 +1219,10 @@
     \begin{itemize}
       \item Para que esta multiplicación tenga sentido, los renglones de $A$ y
             las columnas de $B$ deberán tener la misma longitud $n.$
-            \pause
-      \item La matriz resultante tendrá dimensión $m \times l.$ \pause
+            
+      \item La matriz resultante tendrá dimensión $m \times l.$ 
       \item A menos que $m=l,$ el producto $BA$ podría no estar definido.
-            \pause
+            
       \item Aun cuando $BA$ estuviera bien definido, el producto de matrices no
             es
             \emph{conmutativo,} es decir, generalmente tendremos que $$AB \neq
@@ -1241,7 +1241,7 @@
     $$B= \left(\begin{array}{rr}
         0 & -1
       \end{array}\right) $$
-    \pause Solución:
+     Solución:
     $$AB= \left(\begin{array}{rr}
         0 & 0
       \end{array}\right) $$
@@ -1260,7 +1260,7 @@
         0 & -1 & 0 \\
         0 & 0  & 0
       \end{array}\right) $$
-    \pause Solución:
+     Solución:
     $$AB= \left(\begin{array}{rrr}
         0 & 0 & 0 \\
         0 & 1 & 0 \\
@@ -1280,7 +1280,7 @@
     $$B= \left(\begin{array}{rrr}
         -1 & 0 & 0
       \end{array}\right) $$
-    \pause Solución:
+     Solución:
     $$AB= \left(\begin{array}{rrr}
         1 & 0 & 0 \\
         1 & 0 & 0 \\
@@ -1300,7 +1300,7 @@
     $$B= \left(\begin{array}{r}
         -5
       \end{array}\right) $$
-    \pause Solución:
+     Solución:
     $$AB= \left(\begin{array}{r}
         -30 \\
         45  \\
@@ -1318,7 +1318,7 @@
     $$B= \left(\begin{array}{rrr}
         -1 & 1 & -3
       \end{array}\right) $$
-    \pause Solución:
+     Solución:
     $$AB= \left(\begin{array}{rrr}
         -2 & 2 & -6
       \end{array}\right) $$
@@ -1336,7 +1336,7 @@
         -7 \\
         -4
       \end{array}\right) $$
-    \pause Solución:
+     Solución:
     $$AB= \left(\begin{array}{r}
         19 \\
         53
