@@ -169,8 +169,42 @@
 
 \end{frame}
 
+\begin{frame}
+  \centering
+  \begin{tikzpicture}[scale=1, auto, node distance=2cm, thick]
+
+    % Nodes
+    \node[circle, draw, fill=black, inner sep=0pt, minimum size=5pt] (A) at
+    (0,2) {};
+    \node[circle, draw, fill=black, inner sep=0pt, minimum size=5pt] (B) at
+    (0,0) {};
+    \node[circle, draw, fill=black, inner sep=0pt, minimum size=5pt] (C) at
+    (2,0) {};
+    \node[circle, draw, fill=black, inner sep=0pt, minimum size=5pt] (D) at
+    (2,2) {};
+
+    % Labels
+    \node[above left=0.1cm] at (A) {$A$};
+    \node[below left=0.1cm] at (B) {$B$};
+    \node[below right=0.1cm] at (C) {$C$};
+    \node[above right=0.1cm] at (D) {$D$};
+
+    % Edges with labels
+    \draw (A) -- (D) node[midway, sloped, above] {$e_1$};
+    \draw (A) -- (C) node[midway, sloped, above] {$e_2$};
+    \draw (B) -- (D) node[midway, sloped, above] {$e_3$};
+    \draw[bend left] (B) -- (C) node[midway, sloped, above] {$e_4$};
+    \draw[bend right] (B) -- (C) node[midway, sloped, below] {$e_5$};
+    \draw[loop right] (D) edge[loop] node[right=0.1cm] {$e_6$};
+
+  \end{tikzpicture}
+  \captionof{figure}{A multigraph with labeled edges and loops.}
+  \label{fig:multigraph}
+  % Refer to this graph using Figure~\ref{fig:multigraph}.
+\end{frame}
+
 \begin{frame}{Multigrafos}
-  Consideremos la figura \ref{fig:md0501} (b). Las aristas $e_{4}$y $e_{5}$ son
+  Consideremos la figura \ref{fig:multigraph}. Las aristas $e_{4}$y $e_{5}$ son
   llamadas \emph{aristas multiples} ya que conectan los mismos extremos,
   mientras que la arista $e_{6}$ es llamada \emph{bucle} ya que conecta un
   vértice consigo mismo.
